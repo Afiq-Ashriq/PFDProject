@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    overflow: hidden;
+}
+.songbox {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time {
+    font-family: 'VT323', monospace;
+
+    margin-top: 230px;
+    text-align: center;
+    font-size: 9em;
+}
+.song-button {
+    margin-top: 75px;
+    width: 90%;
+}
+
+.gamebutton {
+    height: 180px;
+}
+.song-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn1 {
+    background-color: rgba(255, 0, 0, 0.15);
+}
+#btn2 {
+    background-color: rgba(0, 128, 0, 0.15);
+}
+#btn3 {
+    background-color: rgba(0, 0, 255, 0.15);
+}
+#btn4 {
+    background-color: rgba(255, 255, 0, 0.15);
+}
+
+.song-button div button {
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    color: whitesmoke;
+
+    border-radius: 20px;
+    border: solid 2px whitesmoke;
+    /* padding: 150px 150px; */
+    height: 88%;
+    width: 100%;
+    transition: all 200ms ease-out;
+}
+
+.song-button div button:hover {
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+}
+
+.correct {
+    transform: scale(1.05);
+    background-color: green !important;
+}
+
+.wrong {
+    background-color: red !important;
+}
+#showpoints {
+    color: whitesmoke;
+    font-family: 'VT323', monospace;
+    font-size: 1.55em;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.rounds {
+    color: whitesmoke;
+    font-family: 'VT323', monospace;
+    font-size: 1.80em;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#loadingscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 1;
+}
+#endmsg {
+    margin-top: 120px;
+    color: whitesmoke;
+    font-family: 'VT323', monospace;
+    font-size: 3.4em;
+}
+.homebtn {
+    text-decoration: none;
+    text-align: center;
+
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 1.5em;
+}
+.homebtn:hover {
+    color: rgb(255, 74, 19);
+    transition-duration: 0.25s;
+}
+#endscreen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+
+
+@media  screen and (max-width: 600px) {
+    #endmsg {
+        font-size: 30px;
+    }
+    .song-button div button {
+        font-size: 1.2em; 
+    }
+
+    
+}
