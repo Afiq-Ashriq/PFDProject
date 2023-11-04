@@ -3,13 +3,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: rgb(218, 218, 218);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-y: hidden;
 }
-#mic {
-    margin-top: 10px;
-    margin-left: 45%;
-    padding: 10px;
+
+.services div:hover {
+    cursor: pointer;
 }
 
 
@@ -17,8 +15,8 @@ body {
     position: relative;
     left: 5%;
     display: grid;
-    grid-template-columns: repeat(2,250px);
-    grid-template-rows: repeat(3,130px);
+    grid-template-columns: repeat(2,230px);
+    grid-template-rows: repeat(3,100px);
     grid-column-gap: 8px;
     grid-row-gap: 8px;
     color: aliceblue;
@@ -28,7 +26,7 @@ body {
 
 .services p {
     margin: 0;
-    font-size: 25px;
+    font-size: 20px;
 }
 .div1 { grid-area: 1 / 1 / 2 / 2; }
 .div2 { grid-area: 1 / 2 / 2 / 3; }
@@ -39,32 +37,37 @@ body {
 .services > div {
     border-radius: 7px;
     background-image: linear-gradient(to right, #133666, #13325c, #132f52, #142b49, #15273f);
-    padding: 50px 0;
-    font-size: 15px;
+    padding: 40px 0;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.vl {
+    border-left: 30px solid whitesmoke;
+    height: 100vh;
+    -webkit-box-shadow: 12px -1px 8px -1px rgba(0,0,0,0.46); 
+    box-shadow: 12px -1px 8px -1px rgba(0,0,0,0.46);
+    z-index: 2;
+  }
+
+.right {
+    position: relative;
+    width: 45%;
+    background-color:rgb(199, 199, 199);
+}
+
+.left {
+    width: 55%;
+    background-color: whitesmoke;
 }
 
 
-.services div {
-    text-align: center;
-    background:linear-gradient(to top, #09203f 0%, #537895 100%);
-    border-radius: 5px;
-    color: aliceblue;
-    margin: 10px;
-    padding: 30px;
-    
-}
 
 
-.services div:hover {
-    cursor: pointer;
 
-    
-}
 .welcome-text{
     display: flex;
     justify-content: center;
@@ -229,15 +232,28 @@ h1 {
 .side-service{
     display: flex;
     margin-top: 100px;
-  
+}
+
+.side-service p{
+    position: absolute;
+    bottom: 0px;
+    font-size: 18px;
+    width: 20%;
+}
+
+.ncServices img {
+    display: block;
+    max-width: 100%;
+    float: right;
+    margin: 15px;
 }
 .card-activate, .balance {
     background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    padding: 40px;
+    padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 15vh;
+    height: 200px;
+    width: 130px;
     border-radius: 20px;
-    flex: 3; /* Add this to make them share the available space */
     margin: 0 10px; /* Add some margin for spacing */
 }
 
@@ -253,11 +269,23 @@ h1 {
       margin: 0;
     }
   
-    .button-pair, .side-service {
+    /* .button-pair, .side-service {
       flex-direction: column;
-    }
+    } */
   
     .cash-button, .other-button, .card-activate, .balance {
       width: 100%;
+    }
+
+
+
+    .services {
+        grid-template-columns: repeat(2,100px);
+        grid-template-rows: repeat(3,80px);
+        
+    }
+
+    .services p {
+        font-size: 10px;
     }
   }
