@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCBC ATM</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
+.welcome-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: slideAnimation 1s forwards;
+}
+
+@keyframes slideAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+    <audio id="beepAudio" src="Sound/Button-beep-tone.mp3"></audio>
+    <div class="welcome-text">
+    <h1>Welcome to OCBC Banking Services</h1>
+    <p style="font-size: 20px;">Tap on screen to log in</p>
+    </div>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            // Check if any key is pressed (keydown event)
+            if (event.keyCode || event.key) {
+                // Redirect to the next page
+                window.location.href = 'login.html'; 
+            }
+        });
+    </script>
+    
+</body>
+</html>

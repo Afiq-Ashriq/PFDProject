@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: rgb(218, 218, 218);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #mic {
     margin-top: 10px;
@@ -18,7 +20,7 @@ body {
 
 .services div {
     text-align: center;
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background:linear-gradient(to top, #09203f 0%, #537895 100%);
     border-radius: 5px;
     color: aliceblue;
     margin: 10px;
@@ -32,4 +34,199 @@ body {
 
     
 }
+.welcome-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
 
+}
+.login-text {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Changed flex direction to column */
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+}
+.login-background {
+    background-color: #ffffff; /* Add your desired background color */
+    padding: 30px 65px; /* Adjust padding as needed */
+    border-radius: 10px; 
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideAnimationContent 1s forwards;
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+.login-button{
+    margin-top: 20px;
+    width: 100%;
+    background: rgb(220, 220, 220);
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 9px;
+    cursor: pointer;
+    
+}
+.login-button:hover{
+    background: #dcdddf;
+}
+.login-button-active{
+    background:rgb(220, 220, 220);
+    pointer-events: none;
+}
+.input-field {
+    margin-top: 20px;
+    display: flex;
+    justify-content: column;
+    flex-wrap: nowrap;
+}
+
+.input-field input {
+    width: 53px;
+    height: 53px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 5px;
+}
+.input-field input::-webkit-inner-spin-button{
+    display: none;
+}
+h1 {
+    margin-bottom: 10px; /* Added margin to separate text and inputs */
+}
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 100px;
+    margin-left: 300px;
+    max-width: 1000px; /* Add a max-width to prevent it from taking up too much space */
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideAnimation 1s forwards;
+}
+@keyframes slideAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideAnimationContent {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.home-text {
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size:20px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideAnimationContent 1s forwards;
+}
+
+.side-content {
+    text-align: center;
+    padding: 50px;
+    margin-left: 30px;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideAnimationContent 1s forwards;
+}
+
+.button-pair {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.cash-button {
+    width: 46%;
+    color: white;
+    border-radius: 10px;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.other-button {
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-height: 50px; /* Adjust the maximum height as needed */
+}
+.side-service{
+    display: flex;
+    margin-top: 100px;
+  
+}
+.card-activate, .balance {
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 15vh;
+    border-radius: 20px;
+    flex: 3; /* Add this to make them share the available space */
+    margin: 0 10px; /* Add some margin for spacing */
+}
+
+@media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    .home-text, .side-content {
+      margin: 0;
+    }
+  
+    .button-pair, .side-service {
+      flex-direction: column;
+    }
+  
+    .cash-button, .other-button, .card-activate, .balance {
+      width: 100%;
+    }
+  }
