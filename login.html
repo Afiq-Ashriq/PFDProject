@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCBC ATM</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <script src="login.js" defer></script>
+    <style>
+      body {
+          position: relative;
+      }
+
+      .exit-icon {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          max-height: 60px;
+      }
+  </style>
 </head>
 <body>
+  <a href="welcome.html" class="exit-icon"><img src="Image/fire-exit.png" width="60px" alt="Exit"></a>
   <div class="login-text">
     <div class="login-background">    
         <h1>Please enter your PIN</h1>
     <div class="input-field">
-        <input type="number" />
-        <input type="number" disabled/>
-        <input type="number" disabled/>
-        <input type="number" disabled/>
-        <input type="number" disabled/>
-        <input type="number" disabled/>
+        <input type="password"  />
     </div>
     <button class="login-button" disabled>Enter</button>
     </div>
