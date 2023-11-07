@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCBC ATM</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="left">
-            <h2>Welcome</h2>
-            <p>Get Cash</p>
+            <button id="chat-toggle">
+                BOT
+            </button>
+            <h3>Hello!</h3>
+            <h3 style="margin-bottom: 90px;">What would you like to do today!</h3>
             <div class="services">
                 <div class="div1"><p>$50</p></div>
                 <div class="div2"><p>$80</p></div>
@@ -38,9 +43,25 @@
             </div>
         </div>
     </div>
+    <div id="chatbot" class="closed">
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "753d1234-3776-4931-b7bb-61d440370d92", // The ID of this integration.
+              region: "us-south", // The region your integration is hosted in.
+              serviceInstanceID: "793be238-819f-40de-b992-dc3c08544f67", // The ID of your service instance.
+              onLoad: async (instance) => { await instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+    </div>
 
 
 </body>
+<script src="chatbot.js"></script>
 <script src="voice.js"></script>
 <script src="script.js"></script>
 </html>

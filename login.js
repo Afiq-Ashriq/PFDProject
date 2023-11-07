@@ -27,7 +27,7 @@ input.addEventListener("keyup", (e) => {
     if (currentInput.value.length == 6) {
         button.removeAttribute('disabled');
         button.addEventListener("click", function(){
-            window.location.href = "home.html";
+            window.location.href = "index.html";
         })
     } else {
         enterButton.setAttribute('disabled', true);
